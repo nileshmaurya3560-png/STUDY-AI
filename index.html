@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDYSPARK AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">STUDY<span>SPARK</span>.</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#workspace">Workspace</a>
+            <a href="#features">Features</a>
+            <a href="#history">History</a>
+        </nav>
+
+        <button id="themeButton" class="theme-button">Dark Mode</button>
+    </header>
+
+
+    <section class="hero" id="home">
+        <p class="small-heading">YOUR PERSONAL AI STUDY ASSISTANT</p>
+
+        <h1>MAKE EVERY<br><span>NOTE COUNT.</span></h1>
+
+        <p class="hero-description">
+            Learn smarter. Remember longer. Study better.
+            Turn your notes into your personal learning experience.
+        </p>
+
+        <a href="#workspace" class="main-button">START LEARNING ↗</a>
+
+        <div class="hero-bottom">
+            <span>01 / LEARN</span>
+            <span>02 / PRACTICE</span>
+            <span>03 / IMPROVE</span>
+        </div>
+    </section>
+
+     
+
+
+
+
+    <section class="intro">
+        <div>
+            <p class="small-heading">INTRODUCING STUDYSPARK</p>
+            <h2>Study less randomly.<br>Understand more deeply.</h2>
+        </div>
+
+        <p>
+            A simple AI-powered study space that helps you
+            create notes, practice questions, revise concepts
+            and track your learning progress.
+        </p>
+    </section>
+
+    
+
+
+    <section class="features-section" id="features">
+        <div class="section-heading">
+            <p class="small-heading">WHAT YOU CAN DO</p>
+            <h2>ONE SPACE. MANY POSSIBILITIES.</h2>
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <span>01</span>
+                <h3>AI SMART NOTES</h3>
+                <p>Convert lengthy notes into simple summaries.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>02</span>
+                <h3>SMART QUIZ</h3>
+                <p>Test your knowledge with AI-generated MCQs.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>03</span>
+                <h3>FLASHCARDS</h3>
+                <p>Remember important concepts through revision cards.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>04</span>
+                <h3>EXPLAIN IT 3 WAYS</h3>
+                <p>Understand difficult topics in different ways.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>05</span>
+                <h3>EXAM GENERATOR</h3>
+                <p>Create practice papers from your notes.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>06</span>
+                <h3>MIND MAP</h3>
+                <p>Organize your ideas and important concepts.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>07</span>
+                <h3>MISTAKE NOTEBOOK</h3>
+                <p>Save your mistakes and revise them later.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>08</span>
+                <h3>VOICE TO NOTES</h3>
+                <p>Convert your spoken ideas into text.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>09</span>
+                <h3>PDF & IMAGE IMPORT</h3>
+                <p>Extract text from your study documents.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>10</span>
+                <h3>STUDY TRACKER</h3>
+                <p>Set daily goals and track your progress.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>11</span>
+                <h3>BOOKMARKS</h3>
+                <p>Save useful notes for quick revision.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>12</span>
+                <h3>REVISION MODE</h3>
+                <p>Practice your saved flashcards again.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="workspace" id="workspace">
+
+        <div class="section-heading">
+            <p class="small-heading">YOUR LEARNING SPACE</p>
+            <h2>LET'S GET TO WORK.</h2>
+        </div>
+
+        <div class="workspace-box">
+
+            <label for="topic">ENTER YOUR TOPIC OR NOTES</label>
+
+            <textarea id="topic"
+                placeholder="Paste your notes or enter a topic here..."></textarea>
+
+            <div class="input-row">
+                <div>
+                    <label for="language">LANGUAGE</label>
+                    <select id="language">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Marathi">Marathi</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="difficulty">DIFFICULTY</label>
+                    <select id="difficulty">
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="workspace-actions">
+                <button onclick="generateAI('summary')">GENERATE SUMMARY</button>
+                <button onclick="generateAI('quiz')">CREATE QUIZ</button>
+                <button onclick="generateAI('flashcards')">MAKE FLASHCARDS</button>
+                <button onclick="generateAI('explain')">EXPLAIN 3 WAYS</button>
+                <button onclick="generateAI('exam')">CREATE EXAM PAPER</button>
+                <button onclick="generateAI('mindmap')">CREATE MIND MAP</button>
+            </div>
+
+            <div id="loading" class="loading">Generating your study material...</div>
+
+            <div class="result-area">
+                <div class="result-heading">
+                    <h3>YOUR STUDY MATERIAL</h3>
+                    <div>
+                        <button onclick="copyResult()">COPY</button>
+                        <button onclick="downloadResult()">DOWNLOAD</button>
+                        <button onclick="bookmarkResult()">BOOKMARK</button>
+                    </div>
+                </div>
+
+                <div id="result">
+                    Your generated content will appear here.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="extra-section">
+        <div>
+            <p class="small-heading">BRING YOUR STUDY MATERIAL</p>
+            <h2>YOUR NOTES.<br>YOUR WAY.</h2>
+            <p>Upload a text file, PDF or image to extract study material.</p>
+        </div>
+
+        <div class="upload-box">
+            <input type="file" id="fileInput" accept=".txt,.pdf,image/*">
+            <button onclick="readFile()">IMPORT FILE</button>
+            <p id="fileMessage">PDF, image or TXT file</p>
+        </div>
+    </section>
+
+    <!-- VOICE NOTES -->
+    <section class="voice-section">
+        <p class="small-heading">SPEAK YOUR IDEAS</p>
+        <h2>VOICE TO NOTES.</h2>
+        <button onclick="startVoice()">START VOICE RECORDING</button>
+        <p id="voiceMessage">Your spoken words will appear in the notes box.</p>
+    </section>
+\
+
+    <section class="goals-section">
+        <p class="small-heading">SMALL STEPS. BIG PROGRESS.</p>
+        <h2>DAILY STUDY GOAL</h2>
+
+        <div class="goal-box">
+            <input type="number" id="goalInput" placeholder="Enter goal in minutes">
+            <button onclick="saveGoal()">SAVE GOAL</button>
+
+            <p id="goalDisplay">Your daily goal is not set.</p>
+
+            <input type="number" id="completedInput" placeholder="Minutes studied today">
+            <button onclick="updateProgress()">UPDATE PROGRESS</button>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <p id="progressText">0% completed</p>
+        </div>
+    </section>
+
+    <!-- MISTAKE NOTEBOOK -->
+    <section class="extra-section" id="mistakes">
+        <div>
+            <p class="small-heading">LEARN FROM YOUR ERRORS</p>
+            <h2>MISTAKE<br>NOTEBOOK.</h2>
+        </div>
+
+        <div class="upload-box">
+            <input type="text" id="mistakeInput"
+                placeholder="Write a question or mistake">
+            <button onclick="saveMistake()">SAVE MISTAKE</button>
+            <div id="mistakeList"></div>
+        </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section class="history-section" id="history">
+        <p class="small-heading">YOUR LEARNING JOURNEY</p>
+        <h2>RECENT SESSIONS.</h2>
+        <div id="historyList"></div>
+        <button onclick="clearHistory()">CLEAR HISTORY</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>STUDYSPARK.</h2>
+        <p>MAKE EVERY NOTE COUNT.</p>
+        <p>© 2026 STUDYSPARK AI. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
