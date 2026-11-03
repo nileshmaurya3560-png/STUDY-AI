@@ -1,174 +1,85 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDYSPARK AI</title>
+
+    <title>STUDYSPARK AI | Smart Learning</title>
+
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
+    <!-- NAVBAR -->
+
     <header class="navbar">
-        <a href="#" class="logo">STUDY<span>SPARK</span>.</a>
+
+        <h2>STUDYSPARK<span>AI.</span></h2>
 
         <nav>
-            <a href="#home">Home</a>
-            <a href="#workspace">Workspace</a>
-            <a href="#features">Features</a>
-            <a href="#history">History</a>
+            <a href="#home">HOME</a>
+            <a href="#workspace">WORKSPACE</a>
+            <a href="#features">FEATURES</a>
+            <a href="#history">HISTORY</a>
+
+            <button id="themeButton" onclick="changeTheme()">
+                DARK MODE
+            </button>
         </nav>
 
-        <button id="themeButton" class="theme-button">Dark Mode</button>
     </header>
 
 
+    <!-- HERO -->
+
     <section class="hero" id="home">
-        <p class="small-heading">YOUR PERSONAL AI STUDY ASSISTANT</p>
 
-        <h1>MAKE EVERY<br><span>NOTE COUNT.</span></h1>
+        <p class="small-heading">YOUR PERSONAL AI STUDY PARTNER</p>
 
-        <p class="hero-description">
-            Learn smarter. Remember longer. Study better.
-            Turn your notes into your personal learning experience.
+        <h1>MAKE EVERY<br>NOTE COUNT.</h1>
+
+        <p class="hero-text">
+            Learn smarter. Understand faster.
+            Make every study session meaningful.
         </p>
 
-        <a href="#workspace" class="main-button">START LEARNING ↗</a>
+        <a href="#workspace" class="main-button">
+            START LEARNING
+        </a>
 
         <div class="hero-bottom">
-            <span>01 / LEARN</span>
-            <span>02 / PRACTICE</span>
-            <span>03 / IMPROVE</span>
-        </div>
-    </section>
-
-     
-
-
-
-
-    <section class="intro">
-        <div>
-            <p class="small-heading">INTRODUCING STUDYSPARK</p>
-            <h2>Study less randomly.<br>Understand more deeply.</h2>
+            <span>THINK BETTER.</span>
+            <span>LEARN FASTER.</span>
+            <span>GROW EVERY DAY.</span>
         </div>
 
-        <p>
-            A simple AI-powered study space that helps you
-            create notes, practice questions, revise concepts
-            and track your learning progress.
-        </p>
-    </section>
-
-    
-
-
-    <section class="features-section" id="features">
-        <div class="section-heading">
-            <p class="small-heading">WHAT YOU CAN DO</p>
-            <h2>ONE SPACE. MANY POSSIBILITIES.</h2>
-        </div>
-
-        <div class="feature-grid">
-
-            <div class="feature-card">
-                <span>01</span>
-                <h3>AI SMART NOTES</h3>
-                <p>Convert lengthy notes into simple summaries.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>02</span>
-                <h3>SMART QUIZ</h3>
-                <p>Test your knowledge with AI-generated MCQs.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>03</span>
-                <h3>FLASHCARDS</h3>
-                <p>Remember important concepts through revision cards.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>04</span>
-                <h3>EXPLAIN IT 3 WAYS</h3>
-                <p>Understand difficult topics in different ways.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>05</span>
-                <h3>EXAM GENERATOR</h3>
-                <p>Create practice papers from your notes.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>06</span>
-                <h3>MIND MAP</h3>
-                <p>Organize your ideas and important concepts.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>07</span>
-                <h3>MISTAKE NOTEBOOK</h3>
-                <p>Save your mistakes and revise them later.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>08</span>
-                <h3>VOICE TO NOTES</h3>
-                <p>Convert your spoken ideas into text.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>09</span>
-                <h3>PDF & IMAGE IMPORT</h3>
-                <p>Extract text from your study documents.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>10</span>
-                <h3>STUDY TRACKER</h3>
-                <p>Set daily goals and track your progress.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>11</span>
-                <h3>BOOKMARKS</h3>
-                <p>Save useful notes for quick revision.</p>
-            </div>
-
-            <div class="feature-card">
-                <span>12</span>
-                <h3>REVISION MODE</h3>
-                <p>Practice your saved flashcards again.</p>
-            </div>
-
-        </div>
     </section>
 
 
-
-
-
-
+    <!-- WORKSPACE -->
 
     <section class="workspace" id="workspace">
 
-        <div class="section-heading">
-            <p class="small-heading">YOUR LEARNING SPACE</p>
-            <h2>LET'S GET TO WORK.</h2>
-        </div>
+        <p class="small-heading">YOUR LEARNING SPACE</p>
 
-        <div class="workspace-box">
+        <h2>LET'S GET TO WORK.</h2>
+
+        <div class="study-card">
 
             <label for="topic">ENTER YOUR TOPIC OR NOTES</label>
 
             <textarea id="topic"
                 placeholder="Paste your notes or enter a topic here..."></textarea>
 
-            <div class="input-row">
+            <div class="options">
+
                 <div>
                     <label for="language">LANGUAGE</label>
+
                     <select id="language">
                         <option value="English">English</option>
                         <option value="Hindi">Hindi</option>
@@ -178,179 +89,265 @@
 
                 <div>
                     <label for="difficulty">DIFFICULTY</label>
+
                     <select id="difficulty">
-                        <option>Easy</option>
-                        <option>Medium</option>
-                        <option>Hard</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
                     </select>
                 </div>
+
             </div>
 
-            <div class="workspace-actions">
-                <button onclick="generateAI('summary')">GENERATE SUMMARY</button>
-                <button onclick="generateAI('quiz')">CREATE QUIZ</button>
-                <button onclick="generateAI('flashcards')">MAKE FLASHCARDS</button>
-                <button onclick="generateAI('explain')">EXPLAIN 3 WAYS</button>
-                <button onclick="generateAI('exam')">CREATE EXAM PAPER</button>
-                <button onclick="generateAI('mindmap')">CREATE MIND MAP</button>
+            <!-- AI BUTTONS -->
+
+            <div class="action-buttons">
+
+                <button onclick="generateAI('summary')">
+                    GENERATE SUMMARY
+                </button>
+
+                <button onclick="generateAI('quiz')">
+                    CREATE QUIZ
+                </button>
+
+                <button onclick="generateAI('flashcards')">
+                    MAKE FLASHCARDS
+                </button>
+
+                <button onclick="generateAI('explain')">
+                    EXPLAIN SIMPLY
+                </button>
+
             </div>
 
-            <div id="loading" class="loading">Generating your study material...</div>
+            <!-- AI OUTPUT -->
 
-            <div class="result-area">
-                <div class="result-heading">
-                    <h3>YOUR STUDY MATERIAL</h3>
-                    <div>
-                        <button onclick="copyResult()">COPY</button>
-                        <button onclick="downloadResult()">DOWNLOAD</button>
-                        <button onclick="bookmarkResult()">BOOKMARK</button>
-                    </div>
+            <div class="output-heading">
+
+                <h3>YOUR STUDY MATERIAL</h3>
+
+                <div class="output-buttons">
+
+                    <button class="small-button" onclick="copyResult()">
+                        COPY
+                    </button>
+
+                    <button class="small-button" onclick="downloadResult()">
+                        DOWNLOAD
+                    </button>
+
+                    <button class="small-button" onclick="bookmarkResult()">
+                        BOOKMARK
+                    </button>
+
                 </div>
 
-                <div id="result">
-                    Your generated content will appear here.
-                </div>
+            </div>
+
+            <div id="result" class="result">
+                Your AI-generated study material will appear here.
             </div>
 
         </div>
+
     </section>
 
 
+    <!-- FEATURES -->
 
+    <section class="benefits" id="features">
 
-    <section class="extra-section">
-        <div>
-            <p class="small-heading">BRING YOUR STUDY MATERIAL</p>
-            <h2>YOUR NOTES.<br>YOUR WAY.</h2>
-            <p>Upload a text file, PDF or image to extract study material.</p>
+        <p class="small-heading">WHY STUDYSPARK AI?</p>
+
+        <h2>STUDY WITH<br>MORE PURPOSE.</h2>
+
+        <div class="benefit-grid">
+
+            <div class="benefit-item">
+                <span>01</span>
+                <h3>AI SUMMARY</h3>
+                <p>Convert long notes into simple study material.</p>
+            </div>
+
+            <div class="benefit-item">
+                <span>02</span>
+                <h3>SMART QUIZ</h3>
+                <p>Practise your knowledge with AI-generated questions.</p>
+            </div>
+
+            <div class="benefit-item">
+                <span>03</span>
+                <h3>FLASHCARDS</h3>
+                <p>Revise important concepts quickly.</p>
+            </div>
+
+            <div class="benefit-item">
+                <span>04</span>
+                <h3>QUICK NOTES</h3>
+                <p>Save your personal study notes.</p>
+            </div>
+
+            <div class="benefit-item">
+                <span>05</span>
+                <h3>BOOKMARKS</h3>
+                <p>Keep your important AI answers accessible.</p>
+            </div>
+
+            <div class="benefit-item">
+                <span>06</span>
+                <h3>STUDY TRACKER</h3>
+                <p>Track your study goals and sessions.</p>
+            </div>
+
         </div>
 
-        <div class="upload-box">
-            <input type="file" id="fileInput" accept=".txt,.pdf,image/*">
-            <button onclick="readFile()">IMPORT FILE</button>
-            <p id="fileMessage">PDF, image or TXT file</p>
+    </section>
+
+
+    <!-- EXTRA STUDY FEATURES -->
+
+    <section class="extra-features">
+
+        <p class="small-heading">YOUR PERSONAL STUDY SPACE</p>
+
+        <h2>BUILD BETTER HABITS.</h2>
+
+        <!-- STATISTICS -->
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <p>TOTAL STUDY SESSIONS</p>
+                <h3 id="sessionStat">0</h3>
+            </div>
+
+            <div class="feature-card">
+                <p>BOOKMARKED NOTES</p>
+                <h3 id="bookmarkStat">0</h3>
+            </div>
+
+            <div class="feature-card">
+                <p>QUICK NOTES</p>
+                <h3 id="quickNoteStat">0</h3>
+            </div>
+
         </div>
-    </section>
 
-    <!-- VOICE NOTES -->
-    <section class="voice-section">
-        <p class="small-heading">SPEAK YOUR IDEAS</p>
-        <h2>VOICE TO NOTES.</h2>
-        <button onclick="startVoice()">START VOICE RECORDING</button>
-        <p id="voiceMessage">Your spoken words will appear in the notes box.</p>
-    </section>
-\
 
-    <section class="goals-section">
-        <p class="small-heading">SMALL STEPS. BIG PROGRESS.</p>
-        <h2>DAILY STUDY GOAL</h2>
+        <!-- DAILY GOAL -->
 
-        <div class="goal-box">
-            <input type="number" id="goalInput" placeholder="Enter goal in minutes">
+        <div class="feature-box">
+
+            <h3>DAILY STUDY GOAL.</h3>
+
+            <p>Set your daily study session target.</p>
+
+            <input type="number" id="goalInput"
+                min="1" placeholder="Enter your daily goal">
+
             <button onclick="saveGoal()">SAVE GOAL</button>
 
-            <p id="goalDisplay">Your daily goal is not set.</p>
+            <p id="goalText">No goal set yet.</p>
 
-            <input type="number" id="completedInput" placeholder="Minutes studied today">
-            <button onclick="updateProgress()">UPDATE PROGRESS</button>
-
-            <div class="progress-bar">
-                <div id="progressFill"></div>
+            <div class="progress-background">
+                <div id="goalProgress"></div>
             </div>
 
-            <p id="progressText">0% completed</p>
+            <button onclick="completeSession()">
+                COMPLETE ONE SESSION
+            </button>
+
         </div>
+
+
+        <!-- QUICK NOTES -->
+
+        <div class="feature-box">
+
+            <h3>QUICK NOTES.</h3>
+
+            <textarea id="quickNoteInput"
+                placeholder="Write your personal study notes..."></textarea>
+
+            <button onclick="saveQuickNote()">SAVE NOTE</button>
+
+            <div id="quickNoteList"></div>
+
+        </div>
+
+
+        <!-- BOOKMARKS -->
+
+        <div class="feature-box">
+
+            <h3>BOOKMARKED MATERIAL.</h3>
+
+            <div id="bookmarkList">
+                No bookmarks yet.
+            </div>
+
+        </div>
+
+
+        <!-- MOTIVATION -->
+
+        <div class="motivation-box">
+
+            <p class="small-heading">A LITTLE DAILY INSPIRATION</p>
+
+            <h2>STAY MOTIVATED.</h2>
+
+            <p id="motivationText">
+                Small steps every day lead to big results.
+            </p>
+
+            <button onclick="newQuote()">NEW QUOTE</button>
+
+        </div>
+
     </section>
-
-    <!-- MISTAKE NOTEBOOK -->
-    <section class="extra-section" id="mistakes">
-        <div>
-            <p class="small-heading">LEARN FROM YOUR ERRORS</p>
-            <h2>MISTAKE<br>NOTEBOOK.</h2>
-        </div>
-
-        <div class="upload-box">
-            <input type="text" id="mistakeInput"
-                placeholder="Write a question or mistake">
-            <button onclick="saveMistake()">SAVE MISTAKE</button>
-            <div id="mistakeList"></div>
-        </div>
-    </section>
-
-<!-- STUDY STATISTICS -->
-<section class="stats-section">
-    <p class="small-heading">YOUR PERFORMANCE</p>
-    <h2>STUDY STATISTICS.</h2>
-
-    <div class="stats-box">
-        <h3 id="sessionCount">0</h3>
-        <p>Total Study Sessions</p>
-    </div>
-</section>
-
-<!-- QUICK NOTES -->
-<section class="quick-notes">
-    <p class="small-heading">SAVE YOUR IDEAS</p>
-    <h2>QUICK NOTES.</h2>
-
-    <textarea id="quickNoteInput"
-        placeholder="Write your personal notes here..."></textarea>
-
-    <button onclick="saveQuickNote()">SAVE NOTE</button>
-
-    <div id="quickNoteList"></div>
-</section>
-
-<!-- DAILY MOTIVATION -->
-<section class="motivation-section">
-    <p class="small-heading">A LITTLE DAILY INSPIRATION</p>
-    <h2>STAY MOTIVATED.</h2>
-
-    <p id="motivationText">
-        Small steps every day lead to big results.
-    </p>
-
-    <button onclick="newQuote()">NEW QUOTE</button>
-</section>
-
 
 
     <!-- HISTORY -->
+
     <section class="history-section" id="history">
+
         <p class="small-heading">YOUR LEARNING JOURNEY</p>
+
         <h2>RECENT SESSIONS.</h2>
-        <div id="historyList"></div>
-        <button onclick="clearHistory()">CLEAR HISTORY</button>
+
+        <div class="history-top">
+
+            <p>
+                Total study sessions:
+                <strong id="sessionCount">0</strong>
+            </p>
+
+            <button onclick="clearHistory()" class="small-button">
+                CLEAR HISTORY
+            </button>
+
+        </div>
+
+        <div id="historyList">
+            <p>No study sessions yet.</p>
+        </div>
+
     </section>
 
+
     <!-- FOOTER -->
+
     <footer>
-        <h2>STUDYSPARK.</h2>
-        <p>MAKE EVERY NOTE COUNT.</p>
+
+        <h2>STUDYSPARK AI.</h2>
+
+        <p>MADE FOR LEARNERS. BUILT FOR GROWTH.</p>
+
         <p>© 2026 STUDYSPARK AI. ALL RIGHTS RESERVED.</p>
+
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
